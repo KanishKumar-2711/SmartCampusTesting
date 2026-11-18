@@ -23,6 +23,9 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest -v
+        
+      - name: Security vulnerability check
+        run: pip-audit
 
       - name: Build Docker image
         run: docker build -t smart-campus .
